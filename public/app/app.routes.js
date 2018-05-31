@@ -1,11 +1,11 @@
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/temperature', {
-            templateUrl : 'views/temperature.html',
+            templateUrl : 'views/temperature.ejs',
             controller  : 'tempController'
         })
         .when('/humidity', {
-            templateUrl : 'views/humidity.html',
+            templateUrl : 'views/humidity.ejs',
             controller  : 'humController'
         });
 }]);

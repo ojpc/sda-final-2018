@@ -25,13 +25,14 @@
 </head>
 
 <!-- define angular controller -->
-<body  ng-app="sda-app">
+<body  ng-app="app">
   <nav class="navbar navbar-default">
     <div class="container">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="temperature"><i class="fa fa-thermometer-empty"></i> Temperature</a></li>
-        <li><a href="humidity"><i class="fa fa-tint"></i> Humidity</a></li>
+        <li><a href="/"><i class="fa fa-home"></i> Inicio</a></li>
+        <li><a href="temperature"><i class="fa fa-thermometer-empty"></i> Temperatura</a></li>
+        <li><a href="humidity"><i class="fa fa-tint"></i> Humedad</a></li>
+        <li><a href="records"><i class="fa fa-history"></i> Históricos</a></li>
       </ul>
     </div>
   </nav>
@@ -41,11 +42,6 @@
   	    <h1>Bienvenido</h1>
       	<p>En esta página puedes ver la temperatura y la humedad de Medellín en tiempo real</p>
      </div>
-    </div>
-  </div>
-  <div class="container">
-      <div class="jumbotron text-center">
-  	     <div ng-view></div>
     </div>
   </div>
 

@@ -1,41 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+  <!DOCTYPE html>
 
-<div class="container">
-  <h2>Basic Table</h2>
-  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
-  <table class="table">
-    <thead>
+  <!-- define angular app -->
+  <html>
+
+  <head>
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="assets/libs/jquery-3.2.1.min.js"></script>
+
+
+    <!-- Angular -->
+    <script src="assets/libs/angular.min.js"></script>
+  	<script src="assets/libs/angular-route.min.js"></script>
+    <script src="assets/libs/angular-resource.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-socket-io/0.7.0/socket.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.services.js"></script>
+
+  </head>
+  <body  ng-app="app">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/"><i class="fa fa-home"></i> Inicio</a></li>
+          <li><a href="temperature"><i class="fa fa-thermometer-empty"></i> Temperatura</a></li>
+          <li><a href="humidity"><i class="fa fa-tint"></i> Humedad</a></li>
+          <li><a href="records"><i class="fa fa-history"></i> Históricos</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="main">
+        <div class="jumbotron text-center">
+    	    <h1>Bienvenido</h1>
+        	<p>En esta página puedes ver la temperatura y la humedad de Medellín en tiempo real</p>
+       </div>
+      </div>
+    </div>
+    <div class="container">
+    <h2>Históricos</h2>
+    <p>La siguiente tabla contiene algunos datos históricos sobre temperatura y humedad en Medellin: </p>
+    <table class="table" style="text-align:center">
+     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th style="text-align:center">ID sensor</th>
+        <th style="text-align:center">Posición sensor</th>
+        <th style="text-align:center">Fecha</th>
+        <th style="text-align:center">Temperature [°C]</th>
+        <th style="text-align:center">Humedad [%]</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>D001</td>
+        <td>6.235302, -75.578655</td>
+        <td>17/02/2017 12:56:12</td>
+        <td>26</td>
+        <td>90</td>
       </tr>
       <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
+        <td>D025</td>
+        <td>6.223331, -75.580342</td>
+        <td>17/04/2017 16:16:53</td>
+        <td>22</td>
+        <td>51</td>
       </tr>
       <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
+        <td>D010</td>
+        <td>6.270373, -75.565268</td>
+        <td>03/01/2018 04:37:25</td>
+        <td>17</td>
+        <td>68</td>
       </tr>
     </tbody>
   </table>

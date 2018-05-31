@@ -1,4 +1,4 @@
-app.factory('users', function($resource){
+app.factory('data', function($resource){
   return $resource('/users/:user/:device', {}, {
     find : {
       url : '/users/:user',

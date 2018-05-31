@@ -1,5 +1,5 @@
-var sdaApi = angular.module('sdaApi', ['btford.socket-io', 'ngRoute']);
-sdaApi.config(['$routeProvider', function ($routeProvider) {
+var app = angular.module('app', ['btford.socket-io', 'ngRoute']);
+app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', {
             templateUrl : 'index.html',
@@ -15,7 +15,7 @@ sdaApi.config(['$routeProvider', function ($routeProvider) {
         });
 }]);
 
-sdaApi.factory('socket', function (socketFactory) {
+app.factory('socket', function (socketFactory) {
   var myIoSocket = io.connect();
   mySocket = socketFactory({
     ioSocket: myIoSocket
@@ -23,15 +23,16 @@ sdaApi.factory('socket', function (socketFactory) {
   return mySocket;
 });
 
-sdaApi.controller('mainController', function($scope, socket) {
+app.controller('mainController', function($scope, socket) {
 
 });
-sdaApi.controller('tempController', function($scope, socket) {
+app.controller('tempController', function($scope, socket) {
+  $scope.temperature = "PRUEBA"
   socket.on('read', function(msg) {
-    $scope.temperatura = msg.temperatura
+    $scope.temperature = msg.temperatura
 })
 });
-sdaApi.controller('humController', function($scope, socket) {
+app.controller('humController', function($scope, socket) {
   socket.on('read', function(msg) {
     $scope.humedad = msg.humedad
 })

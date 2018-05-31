@@ -1,1 +1,1 @@
-var app = angular.module('sda-app', ['ngRoute', 'ngResource'])
+var app = angular.module('app', ['ngRoute', 'ngResource'])

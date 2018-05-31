@@ -23,13 +23,14 @@
   <script src="app/app.services.js"></script>
 
 </head>
-<body  ng-app="sda-app">
+<body  ng-app="app">
   <nav class="navbar navbar-default">
     <div class="container">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="temperature"><i class="fa fa-thermometer-empty"></i> Temperature</a></li>
-        <li><a href="humidity"><i class="fa fa-tint"></i> Humidity</a></li>
+        <li><a href="/"><i class="fa fa-home"></i> Inicio</a></li>
+        <li><a href="temperature"><i class="fa fa-thermometer-empty"></i> Temperatura</a></li>
+        <li><a href="humidity"><i class="fa fa-tint"></i> Humedad</a></li>
+        <li><a href="records"><i class="fa fa-history"></i> Históricos</a></li>
       </ul>
     </div>
   </nav>
@@ -43,10 +44,14 @@
   </div>
   <div class="container">
     <div class="jumbotron text-center">
-    	<p>Temperatura: {{ temperature }}  </p>
+    	<p><b>Temperatura:</b> <%= temperature %>  </p>
     </div>
   </div>
-
+  <div class="row" align="center">
+    <div class="col-md-12" >
+      <button  type="button" class="btn btn-info"><b>Guardar histórico<b></button>
+    </div>
+  </div>
 </body>
 
 </html>
