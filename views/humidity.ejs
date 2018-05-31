@@ -7,6 +7,7 @@
   <!-- SCROLLS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <!-- Jquery -->
   <script src="assets/libs/jquery-3.2.1.min.js"></script>
@@ -42,11 +43,61 @@
      </div>
     </div>
   </div>
-  <div class="container">
-    <div class="jumbotron text-center">
-      <p> <b>Humedad:</b> <%= humidity %>  </p>
+  <div class="w3-content w3-display-container">
+    <div class="mySlides">
+      <row>
+        <p> <b>ID dispositivo:</b> <%= disp1 %>  <b>Posición:</b> <%= pos1 %> </p>
+      </row>
+    <row>
+      <div class="jumbotron text-center">
+    	  <p style="width:100%"><b>Humedad:</b> <%= humedad1 %>  </p>
+      </div>
+    </row>
     </div>
+    <div class="mySlides">
+      <row>
+        <p> <b>ID dispositivo:</b> <%= disp2 %>  <b>Posición:</b> <%= pos2 %> </p>
+      </row>
+    <row>
+      <div class="jumbotron text-center">
+    	  <p style="width:100%"><b>Humedad:</b> <%= humedad2 %>  </p>
+      </div>
+    </row>
+    </div>
+    <div class="mySlides">
+      <row>
+        <p> <b>ID dispositivo:</b> <%= disp3 %>  <b>Posición:</b> <%= pos3 %> </p>
+      </row>
+    <row>
+      <div class="jumbotron text-center">
+    	  <p style="width:100%"><b>Humedad:</b> <%= humedad3 %>  </p>
+      </div>
+    </row>
+    </div>
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
   </div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
   <div class="row" align="center">
     <div class="col-md-12" >
       <button  type="button" class="btn btn-info"><b>Guardar histórico<b></button>
