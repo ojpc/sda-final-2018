@@ -23,7 +23,7 @@
   <script src="app/app.services.js"></script>
 
 </head>
-<body  ng-app="app">
+<body  ng-app='app' ng-controller='front'>
   <nav class="navbar navbar-default">
     <div class="container">
       <ul class="nav navbar-nav navbar-right">
@@ -37,7 +37,7 @@
   <div class="container">
     <div id="main">
       <div class="jumbotron text-center">
-  	    <h1>Bienvenido</h1>
+  	    <h1>Bienvenido </h1>
       	<p>En esta página puedes ver la temperatura y la humedad de Medellín en tiempo real</p>
      </div>
     </div>
@@ -46,31 +46,31 @@
   <div class="w3-content w3-display-container">
     <div class="mySlides">
       <row>
-        <p> <b>ID dispositivo:</b> <%= disp1 %>  <b>Posición:</b> <%= pos1 %> </p>
+        <p> <b>ID dispositivo:</b> {{ disp1}}  <b>Posición:</b> {{pos1}} </p>
       </row>
     <row>
       <div class="jumbotron text-center">
-    	  <p style="width:100%"><b>Temperatura:</b> <%= temperature1 %>  </p>
+    	  <p style="width:100%"><b>Temperatura:</b> {{read}} </p>
       </div>
     </row>
     </div>
     <div class="mySlides">
       <row>
-        <p> <b>ID dispositivo:</b> <%= disp2 %>  <b>Posición:</b> <%= pos2 %> </p>
+        <p> <b>ID dispositivo:</b> {{disp2}}  <b>Posición:</b>  {{pos2}}  </p>
       </row>
     <row>
       <div class="jumbotron text-center">
-    	  <p style="width:100%"><b>Temperatura:</b> <%= temperature2 %>  </p>
+    	  <p style="width:100%"><b>Temperatura:</b> {{temperature2}}  </p>
       </div>
     </row>
     </div>
     <div class="mySlides">
       <row>
-        <p> <b>ID dispositivo:</b> <%= disp3 %>  <b>Posición:</b> <%= pos3 %> </p>
+        <p> <b>ID dispositivo:</b>  {{disp3}}   <b>Posición:</b>  {{pos3}}  </p>
       </row>
     <row>
       <div class="jumbotron text-center">
-    	  <p style="width:100%"><b>Temperatura:</b> <%= temperature3 %>  </p>
+    	  <p style="width:100%"><b>Temperatura:</b> {{temperature3}}  </p>
       </div>
     </row>
     </div>
@@ -100,7 +100,7 @@ function showDivs(n) {
 
   <div class="row" align="center">
     <div class="col-md-12" >
-      <button  type="button" class="btn btn-info"><b>Guardar histórico<b></button>
+      <button href="/records-save" type="button" class="btn btn-info"><b>Guardar histórico<b></button>
     </div>
   </div>
 </body>
