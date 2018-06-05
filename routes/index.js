@@ -14,13 +14,12 @@ router.get('/', function(req, res, next){
 
 router.get('/temperature', function(req, res, next){
   res.render('temperature.ejs', {});
-  console.log(io.emit('read', "funciona"));
+  console.log(io.emit('esp8266', "funciona"));
 });
 
 router.post('/temperature', function(req, res, next){
   var data=req.body;
-  io.emit('read', data.temp);
-  console.log(data)
+  io.emit('esp8266', data);
   res.send(req.body)
 });
 

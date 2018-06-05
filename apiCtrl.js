@@ -28,12 +28,12 @@ app.controller('mainController', function($scope, socket) {
 });
 app.controller('tempController', function($scope, socket) {
   $scope.temperature = "PRUEBA"
-  socket.on('read', function(msg) {
+  socket.on('esp8266', function(msg) {
     $scope.temperature = msg.temperatura
 })
 });
 app.controller('humController', function($scope, socket) {
-  socket.on('read', function(msg) {
+  socket.on('esp8266', function(msg) {
     $scope.humedad = msg.humedad
 })
 });

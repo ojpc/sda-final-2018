@@ -36,20 +36,18 @@ app.factory('user', function($resource, $location){
 })
 
 app.controller("front", function($scope, socket) {
-
-  $scope.temperature1 = "20 °C";
   $scope.temperature2 = "24 °C";
   $scope.temperature3 = "17 °C";
-  $scope.pos1="6.235302, -75.578655";
   $scope.pos2="6.223331, -75.580342";
   $scope.pos3="6.270373, -75.565268";
-  $scope.disp1="D001";
   $scope.disp2="D025";
   $scope.disp3="D010";
-  socket.on('read', function(msg) {
-    console.log(msg)
-    console.log('FUNCIONA')
-    $scope.read = msg
+  socket.on('esp8266', function(msg) {
+    $scope.temperature1 = msg.temp;
+    $scope.humedad1 = msg.hum;
+    $scope.pos1 = msg.pos;
+    $scope.disp1 = msg.id;
+    $scope.timestamp1 = msg.time;
   })
 
 })

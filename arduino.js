@@ -5,7 +5,7 @@ arduino.on('ready', function(){
   console.log("Arduino connected");
   arduino.setSamplingInterval(10000);
   arduino.digitalRead(8, function(value) {
-    //io.emit('read', value);
+    //io.emit('esp8266', value);
   });
 })
 
