@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
   <!-- Jquery -->
   <script src="assets/libs/jquery-3.2.1.min.js"></script>
 
@@ -24,7 +23,7 @@
   <script src="app/app.services.js"></script>
 
 </head>
-<body  ng-app="app">
+<body  ng-app='app' ng-controller='humidityCtrl'>
   <nav class="navbar navbar-default">
     <div class="container">
       <ul class="nav navbar-nav navbar-right">
@@ -46,31 +45,31 @@
   <div class="w3-content w3-display-container">
     <div class="mySlides">
       <row>
-        <p> <b>ID dispositivo:</b> <%= disp1 %>  <b>Posición:</b> <%= pos1 %> </p>
+        <p> <b>ID dispositivo:</b> {{ disp1 }}  <b>Posición:</b> {{ pos1 }} <b>Fecha de muestreo:</b> {{timestamp1}}</p>
       </row>
     <row>
       <div class="jumbotron text-center">
-    	  <p style="width:100%"><b>Humedad:</b> <%= humedad1 %>  </p>
+    	  <p style="width:100%"><b>Humedad:</b> {{ humedad1 }}  </p>
       </div>
     </row>
     </div>
     <div class="mySlides">
       <row>
-        <p> <b>ID dispositivo:</b> <%= disp2 %>  <b>Posición:</b> <%= pos2 %> </p>
+        <p> <b>ID dispositivo:</b> {{ disp2 }}  <b>Posición:</b> {{ pos2 }} </p>
       </row>
     <row>
       <div class="jumbotron text-center">
-    	  <p style="width:100%"><b>Humedad:</b> <%= humedad2 %>  </p>
+    	  <p style="width:100%"><b>Humedad:</b> {{ humedad2 }}  </p>
       </div>
     </row>
     </div>
     <div class="mySlides">
       <row>
-        <p> <b>ID dispositivo:</b> <%= disp3 %>  <b>Posición:</b> <%= pos3 %> </p>
+        <p> <b>ID dispositivo:</b> {{ disp3 }}  <b>Posición:</b> {{ pos3 }} <b>Fecha de muestreo:</b> {{timestamp1}}</p>
       </row>
     <row>
       <div class="jumbotron text-center">
-    	  <p style="width:100%"><b>Humedad:</b> <%= humedad3 %>  </p>
+    	  <p style="width:100%"><b>Humedad:</b> {{ humedad3 }}  </p>
       </div>
     </row>
     </div>

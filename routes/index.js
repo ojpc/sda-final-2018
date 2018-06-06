@@ -14,7 +14,6 @@ router.get('/', function(req, res, next){
 
 router.get('/temperature', function(req, res, next){
   res.render('temperature.ejs', {});
-  console.log(io.emit('esp8266', "funciona"));
 });
 
 router.post('/temperature', function(req, res, next){
@@ -24,8 +23,13 @@ router.post('/temperature', function(req, res, next){
 });
 
 router.get('/humidity', function(req, res, next){
-  res.render('humidity.ejs', { humedad1: "70 %", humedad2: "64 %", humedad3: "56 %",
-pos1:"6.235302, -75.578655", pos2:"6.223331, -75.580342", pos3:"6.270373, -75.565268",disp1:"D001",disp2:"D025",disp3:"D010" });
+  res.render('humidity.ejs', {});
+});
+
+router.post('/humidity', function(req, res, next){
+  var data=req.body;
+  io.emit('esp8266', data);
+  res.send(req.body)
 });
 
 router.get('/records', function(req, res, next){
