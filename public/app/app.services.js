@@ -36,7 +36,7 @@ app.controller("temperatureCtrl", function($scope, socket, $http) {
                         'Content-Type': 'application/json'
                       }
                   }
-    $http.post("http://localhost:8000/saverecord", data, config).then(function(r){
+    $http.post("https://sda2018.herokuapp.com/saverecord", data, config).then(function(r){
                 console.log(r)
                 if (r.statusText==="Created"){
                   alert("Histórico guardado exitosamente!");
@@ -76,7 +76,7 @@ app.controller("humidityCtrl", function($scope, socket,$http) {
                         'Content-Type': 'application/json'
                       }
                   }
-    $http.post("http://localhost:8000/saverecord", data, config).then(function(r){
+    $http.post("https://sda2018.herokuapp.com/saverecord", data, config).then(function(r){
                 console.log(r)
                 if (r.statusText==="Created"){
                   alert("Histórico guardado exitosamente!");
@@ -87,6 +87,7 @@ app.controller("humidityCtrl", function($scope, socket,$http) {
             };
 })
 
+
 app.controller("recordsCtrl", function($scope,$http) {
   var config = {
                 headers : {
@@ -94,7 +95,7 @@ app.controller("recordsCtrl", function($scope,$http) {
                     }
                 }
   var data = {"test":"test"}
-  $http.post("http://localhost:8000/getrecords",data,config).then(function(r){
+  $http.post("https://sda2018.herokuapp.com/getrecords",data,config).then(function(r){
     $(document).ready(function() {
     r.data.forEach(function(element) {
       var row = $("<tr />")
@@ -108,5 +109,4 @@ app.controller("recordsCtrl", function($scope,$http) {
    });
   });
   })
-
 })
