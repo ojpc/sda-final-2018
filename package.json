@@ -1,7 +1,7 @@
 {
   "name": "sda2018",
   "version": "1.0.0",
-  "description": "Proyecto final para la materia SDA, 2018-1, Univeridad EAFIT",
+  "description": "Proyecto final para la materia SDA, 2018-1, Universidad EAFIT",
   "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www",
