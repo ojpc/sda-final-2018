@@ -3,7 +3,6 @@ app.factory('socket', function (socketFactory) {
   mySocket = socketFactory({
     ioSocket: myIoSocket
   });
-  console.log(mySocket)
   return mySocket;
 });
 
@@ -37,7 +36,6 @@ app.controller("temperatureCtrl", function($scope, socket, $http) {
                       }
                   }
     $http.post("https://sda2018.herokuapp.com/saverecord", data, config).then(function(r){
-                console.log(r)
                 if (r.statusText==="Created"){
                   alert("Histórico guardado exitosamente!");
                 } else {
@@ -77,7 +75,6 @@ app.controller("humidityCtrl", function($scope, socket,$http) {
                       }
                   }
     $http.post("https://sda2018.herokuapp.com/saverecord", data, config).then(function(r){
-                console.log(r)
                 if (r.statusText==="Created"){
                   alert("Histórico guardado exitosamente!");
                 } else {

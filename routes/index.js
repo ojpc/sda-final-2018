@@ -33,7 +33,6 @@ router.post('/temperature', function(req, res, next){
 });
 
 router.post('/saverecord', function(req, res, next){
-  console.log(req.body)
   var newRecord={
     "temp":req.body.temp,
     "hum":req.body.hum,
