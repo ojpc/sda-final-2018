@@ -6,7 +6,6 @@ var ObjectID = mongodb.ObjectID;
 var app = express();
 var assert = require("assert");
 var index = require('./routes/index');
-//var arduino = require('./arduino');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

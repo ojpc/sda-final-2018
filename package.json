@@ -1,22 +1,20 @@
 {
-  "name": "sda-api",
+  "name": "sda2018",
   "version": "1.0.0",
-  "description": "Ejemplo de Clase",
+  "description": "Proyecto final para la materia SDA, 2018-1, Univeridad EAFIT",
   "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "vcamargo.e@gmail.com",
+  "author": "oparada@eafit.edu.co, aarbel17@eafit.edu.co",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "~2.5.6",
     "express": "^4.16.3",
-    "firmata": "^0.19.1",
-    "jquery": "^3.3.1",
-    "jquery.tabulator": "^3.5.2",
-    "mongodb": "^2.2.33",
+    "jquery": "2.2.1",
+    "mongodb": "3.0.10",
     "request": "^2.87.0",
     "socket.io": "^2.1.1"
   }

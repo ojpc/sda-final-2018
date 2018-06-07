@@ -19,7 +19,6 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-socket-io/0.7.0/socket.js"></script>
   <script src="app/app.module.js"></script>
-  <script src="app/app.routes.js"></script>
   <script src="app/app.services.js"></script>
 
 </head>
@@ -56,7 +55,7 @@
     </div>
     <div class="mySlides">
       <row>
-        <p> <b>ID dispositivo:</b> {{disp2}}  <b>Posición:</b>  {{pos2}}  </p>
+        <p> <b>ID dispositivo:</b> {{disp2}}  <b>Posición:</b>  {{pos2}} <b>Fecha de muestreo:</b> {{timestamp2}} </p>
       </row>
     <row>
       <div class="jumbotron text-center">
@@ -66,7 +65,7 @@
     </div>
     <div class="mySlides">
       <row>
-        <p> <b>ID dispositivo:</b>  {{disp3}}   <b>Posición:</b>  {{pos3}}  </p>
+        <p> <b>ID dispositivo:</b>  {{disp3}}   <b>Posición:</b>  {{pos3}} <b>Fecha de muestreo:</b> {{timestamp3}} </p>
       </row>
     <row>
       <div class="jumbotron text-center">
@@ -100,7 +99,7 @@ function showDivs(n) {
 
   <div class="row" align="center">
     <div class="col-md-12" >
-      <button href="/records-save" type="button" class="btn btn-info"><b>Guardar histórico<b></button>
+      <button ng-click="saveRecord();" type="button" class="btn btn-info"><b>Guardar histórico<b></button>
     </div>
   </div>
 </body>
